@@ -1,0 +1,32 @@
+{
+  "name": "b2205857_dangcongdanh_backend_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --inspect --exec babel-node ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danhb2205857/B2205857_DangCongDanh_BackEnd_1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danhb2205857/B2205857_DangCongDanh_BackEnd_1/issues"
+  },
+  "homepage": "https://github.com/danhb2205857/B2205857_DangCongDanh_BackEnd_1#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "yarn": "^1.22.22"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.27.2",
+    "@babel/core": "^7.27.4",
+    "@babel/node": "^7.27.1",
+    "@babel/preset-env": "^7.27.2"
+  }
+}
