@@ -5,8 +5,10 @@ import dotenv from 'dotenv'
 dotenv.config()
 const port = process.env.PORT || 3000
 
-import { appRoute } from "./appRoute"
+import connectDB from "./config/config"
+connectDB()
 
+import { appRoute } from "./appRoute"
 appRoute(app)
 
 app.listen(port, () => {
