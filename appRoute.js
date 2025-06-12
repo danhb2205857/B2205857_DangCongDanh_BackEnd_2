@@ -12,5 +12,7 @@ export function appRoute(app) {
 
     router.post('/contacts', asyncHandler(contactController.create))
 
+    router.delete('/contacts', asyncHandler(contactController.deleteAll))
+    
     app.use('/api/', router);
 }
