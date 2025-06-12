@@ -8,6 +8,7 @@ const port = process.env.PORT || 3000
 import connectDB from "./config/config"
 connectDB()
 
+app.use(express.json());
 import { appRoute } from "./appRoute"
 appRoute(app)
 

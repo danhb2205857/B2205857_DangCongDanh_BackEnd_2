@@ -10,5 +10,7 @@ import asyncHandler from "./middlewares/asyncHandler";
 export function appRoute(app) {
     router.get('/contacts', asyncHandler(contactController.findAll))
 
+    router.post('/contacts', asyncHandler(contactController.create))
+
     app.use('/api/', router);
 }
