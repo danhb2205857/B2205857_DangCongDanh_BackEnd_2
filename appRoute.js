@@ -13,6 +13,10 @@ export function appRoute(app) {
     router.post('/contacts', asyncHandler(contactController.create))
 
     router.delete('/contacts', asyncHandler(contactController.deleteAll))
+
+    router.get('/contacts/favorite', asyncHandler(contactController.findFavorite))
+    
+    router.get('/contacts/:_id', asyncHandler(contactController.findByPk))
     
     app.use('/api/', router);
 }

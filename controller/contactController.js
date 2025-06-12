@@ -28,14 +28,40 @@ export async function create(req, res) {
 export async function deleteAll(req, res) {
   const data = await Contact.deleteMany();
 
-  if (data){
+  if (data) {
     return res.status(200).json({
-    message: "Xoá contact thành công"
-  });
-  }else{
+      message: "Xoá contact thành công",
+    });
+  } else {
     return res.status(500).json({
-    message: "Xoá contact không thành công"
-  });
+      message: "Xoá contact không thành công",
+    });
   }
-  
 }
+  export async function findFavorite(req, res) {
+    const data = await Contact.find({ favorite: true });
+
+    return res.status(200).json({
+      message: "Lấy danh sách contact thành công",
+      data: data,
+    });
+  }
+
+  export async function findByPk(req, res) {
+    const { _id } = req.params
+
+    const data = await Contact.find({ _id: _id });
+
+    if(data){
+      return res.status(200).json({
+      message: "Lấy contact thành công",
+      data: data,
+    });
+    }
+    else {
+      return res.status(500).json({
+      message: "Lấy contact không thành công"
+    });
+    }
+    
+  }
