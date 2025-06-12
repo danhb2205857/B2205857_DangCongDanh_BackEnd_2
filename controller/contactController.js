@@ -1,7 +1,11 @@
 import express from "express";
+import Contact from "../models/contact";
 
-export function find(req, res) {
+export async function findAll(req, res) {
+  const data = await Contact.find()
+
   return res.status(200).json({
-    message: "Router đầu tiên",
+    message: "Lấy danh sách contact thành công",
+    data: data
   });
 }

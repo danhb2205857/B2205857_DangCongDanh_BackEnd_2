@@ -8,7 +8,7 @@ import * as contactController from './controller/contactController'
 import asyncHandler from "./middlewares/asyncHandler";
 
 export function appRoute(app) {
-    router.get('/home', asyncHandler(contactController.find))
+    router.get('/contacts', asyncHandler(contactController.findAll))
 
     app.use('/api/', router);
 }
