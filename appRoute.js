@@ -18,5 +18,9 @@ export function appRoute(app) {
     
     router.get('/contacts/:_id', asyncHandler(contactController.findByPk))
     
+    router.put('/contacts/:_id', asyncHandler(contactController.update))
+    
+    router.delete('/contacts/:_id', asyncHandler(contactController.deleteById))
+
     app.use('/api/', router);
 }
